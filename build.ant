@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	ANT file
+	Copyright 2015 IS2T. All rights reserved.
+	IS2T PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+-->
+<project name="numeric-linear" default="numeric-linear/export">
+
+	<dirname file="${ant.file.numeric-linear}" property="numeric-linear.project"/>
+	<basename file="${numeric-linear.project}" property="numeric-linear.projectname"/>
+	<dirname file="${numeric-linear.project}" property="numeric-linear.project.container"/>
+	<property name="numeric-linear.output.dirname" value="dist"/>
+	<property name="numeric-linear.output.dir" location="${numeric-linear.project}/${numeric-linear.output.dirname}"/>
+
+	<target name="numeric-linear/export">
+		<fileset id="numeric-linear.files" dir="${numeric-linear.project.container}">
+			<include name="${numeric-linear.projectname}/**"/>
+			<exclude name="${numeric-linear.projectname}/${numeric-linear.output.dirname}/**"/>
+			<exclude name="*/bin*/**"/>
+			<exclude name="*/com.*/**"/>
+			<exclude name="*/*.map"/>
+			<exclude name="*/**/.jazzignore"/>
+			<exclude name="*/**/.gitignore"/>
+			<exclude name="*/**/.DS_Store"/>
+			<exclude name="*/launches/*.properties"/>
+			<exclude name="*/.settings/org.sonar.ide.eclipse.core.prefs"/>
+		</fileset>
+		<tstamp>
+			<format property="version" pattern="yyyyMMdd" />
+		</tstamp>
+		<zip destfile="${numeric-linear.output.dir}/${numeric-linear.projectname}-${version}.zip">
+			<fileset refid="numeric-linear.files" />
+		</zip>
+	</target>
+		
+</project>
