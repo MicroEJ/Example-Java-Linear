@@ -46,7 +46,7 @@
 <stringAttribute key="com.is2t.microej.workbench.stdMicroEJLaunchConfigurationJPFConfigurationTabCSTART_com.is2t.microej.workbench.std.launch.ext.TextFieldOption_CENDs3.slow" value="0"/>
 <stringAttribute key="com.is2t.microej.workbench.stdMicroEJLaunchConfigurationMainClass" value="com.is2t.examples.numeric.linear.LinearExample"/>
 <stringAttribute key="com.is2t.microej.workbench.stdMicroEJLaunchConfigurationMicroJVM" value="MICROJVM"/>
-<stringAttribute key="com.is2t.microej.workbench.stdMicroEJLaunchConfigurationOutputDir" value="${workspace_loc}/Example-Java-Linear"/>
+<stringAttribute key="com.is2t.microej.workbench.stdMicroEJLaunchConfigurationOutputDir" value="${project_loc:Example-Java-Linear}"/>
 <stringAttribute key="com.is2t.microej.workbench.stdMicroEJLaunchConfigurationProject" value="Example-Java-Linear"/>
 <listAttribute key="com.is2t.microej.workbench.stdMicroEJLaunchConfigurationRequiredTypes"/>
 <listAttribute key="com.is2t.microej.workbench.stdMicroEJLaunchConfigurationResources"/>
